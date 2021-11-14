@@ -18,6 +18,7 @@ refs.loadMoreBtn.addEventListener('click', onLoadMore);
 function onSearch(e) {
   e.preventDefault();
 
+  clearImgContainer();
   newsApiService.query = e.currentTarget.elements.query.value;
   newsApiService.resetPage();
   newsApiService.fetchImg().then(appendImgMarkup);
@@ -31,4 +32,6 @@ function appendImgMarkup(img) {
   refs.galleryContainer.insertAdjacentHTML('beforeend', imgTmpl(img));
 }
 
-function clearImgContainer() {}
+function clearImgContainer() {
+  refs.galleryContainer.innerHTML = '';
+}
