@@ -4,3 +4,27 @@
   background-color: bisque;
   border-radius: 8px;
 }
+
+.gallery {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+}
+img {
+  max-width: 350px;
+  height: auto;
+
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* img:not(:last-child) {
+  margin-right: 20px;
+} */
+
+ul {
+  list-style: none;
+}

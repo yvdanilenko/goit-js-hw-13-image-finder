@@ -30,3 +30,5 @@ function onLoadMore() {
 function appendImgMarkup(img) {
   refs.galleryContainer.insertAdjacentHTML('beforeend', imgTmpl(img));
 }
+
+function clearImgContainer() {}
